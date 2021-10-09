@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3c44aa10f3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/prestamo.css">
+    <title>Simulador de Prestamo</title>
+</head>
+<body>
+    <div class="visible primer">
+        <fieldset class="flexbox">
+            <form class="form">
+                <div class="capitaldiv">
+                    <label for="capital">Capital 
+                        <input step="100000" value="5000000" type="number" min="5000000" max="150000000" placeholder="Ingrese el capital" id="capital">
+                    <p class="parrafo">Elije un valor entre 5.000.000 y 150.000.000 COP</p>
+                    </label>
+                </div>
+                <div>
+                    <label for="couta">Cuotas 
+                        <input value="6" type="number" min="12" max="120" placeholder="Ingrese las cuotas" id="couta">
+                        <p class="parrafo">Elije plazo entre 12 y 120 meses</p>
+                    </label>
+                </div>
+            </form>
+        <button onclick="gen_table();">Calcula la cuota fija mensual</button>
+        <p class="parrafo">*Valores Aproximados</p>
+    </div>
+
+
+
+
+    <div class="respuesta hidden">
+        <section>
+            <label for="capital2">Capital</label>
+            <input type="text" placeholder="" id="capitalrespuesta">
+            <label for="plazo2">Plazo</label>
+            <input type="text" placeholder="" id="plazorespuesta">
+            <p>Valor de la cuota fija mensual</p>
+            <button id="valorcuota"></button>
+        </section>
+        <section>
+            <i>icono de asistente</i>
+            <button><a href="#">Contactarme con un asesor</a></button>
+        </section>
+        <section>
+            <button id="otrasimulacion" onclick="simulacion2()">Hacer otra simulación</button>
+            <p>*Estimado usuario, el presente cálculo es una simulación, sus valores son aproximados, pueden variar y no representa un compromiso para Ronassar. La tasa de interés remuneratoria corresponderá a la que Ronassar esté cobrando al momento del desembolso. </p>
+        </section>
+    </div>
+    <script src="scripts/prestamo.js"></script>
+</body>
+</html>
